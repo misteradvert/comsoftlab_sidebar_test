@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comsoftlab sidebar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      charset="'utf-8"
+    ></script>
+  </head>
+  <body>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="side-bar">
+      <div class="close-btn">
+        <i class="fas fa-times"></i>
+      </div>
+
+      <div class="user-block">
+        <div class="user-block__avatar"></div>
+
+        <script>
+          let noteArr = [1, 2, 3];
+          function getNoteNum(noteArr) {
+            return noteArr.length;
+          }
+
+          document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".user-block__icons-bell-num").innerText =
+              getNoteNum(noteArr);
+          });
+
+          let agreeArr = [1, 2, 3, 4, 5, 6, 7, 8];
+          function getAgreeNum(agreeArr) {
+            return agreeArr.length;
+          }
+
+          document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".user-block__icons-tick-num").innerText =
+              getAgreeNum(agreeArr);
+          });
+        </script>
+
+        <div class="user-block__iconsbutton">
+          <div class="user-block__icons">
+            <div class="user-block__icons-bell">
+              <div class="user-block__icons-bell-num"></div>
+            </div>
+            <div class="user-block__icons-tick">
+              <div class="user-block__icons-tick-num"></div>
+            </div>
+          </div>
+          <button class="user-block__logout">Выйти</button>
+        </div>
+      </div>
+
+      <div class="icons-block">
+        <div class="icons-block__icons">
+          <div class="icons-block__icons-appstore"></div>
+          <div class="icons-block__icons-googleplay"></div>
+          <div class="icons-block__icons-telegram"></div>
+        </div>
+        <div class="icons-block__text">InstallPlan Version 1.2</div>
+      </div>
+
+      <div class="menu">
+        <div class="item">
+          <a href="#"><i class="fas fa-desktop"></i>Планировщик</a>
+        </div>
+
+        <div class="item">
+          <a class="sub-btn"
+            ><i class="fas fa-table"></i>CRM<i
+              class="fas fa-angle-right dropdown"
+            ></i
+          ></a>
+          <div class="sub-menu">
+            <a href="#" class="sub-item">Сделки</a>
+            <a href="#" class="sub-item">Компании</a>
+            <a href="#" class="sub-item">Контакты</a>
+            <a href="#" class="sub-item">Объекты</a>
+            <a href="#" class="sub-item">Договоры</a>
+
+            <a class="sub-btn"
+              >Коммерческие предложения<i
+                class="fas fa-angle-right dropdown"
+              ></i
+            ></a>
+
+            <div class="sub-menu">
+              <a href="#" class="sub-item">Создать</a>
+            </div>
+
+            <a class="sub-btn"
+              >Счета<i class="fas fa-angle-right dropdown"></i
+            ></a>
+
+            <div class="sub-menu">
+              <a href="#" class="sub-item">Создать</a>
+            </div>
+
+            <a class="sub-btn"
+              >Акты выполненных работ<i class="fas fa-angle-right dropdown"></i
+            ></a>
+
+            <div class="sub-menu">
+              <a href="#" class="sub-item">Создать</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <a class="sub-btn"
+            ><i class="fas fa-cogs"></i>Склад<i
+              class="fas fa-angle-right dropdown"
+            ></i
+          ></a>
+          <div class="sub-menu">
+            <a class="sub-btn"
+              >Закупки<i class="fas fa-angle-right dropdown"></i
+            ></a>
+
+            <div class="sub-menu">
+              <a href="#" class="sub-item">Заказ поставщику</a>
+              <a href="#" class="sub-item">Счет поставщика</a>
+              <a href="#" class="sub-item">Приемка</a>
+              <a href="#" class="sub-item">Возврат поставщику</a>
+            </div>
+
+            <a class="sub-btn"
+              >Продажи<i class="fas fa-angle-right dropdown"></i
+            ></a>
+
+            <div class="sub-menu">
+              <a href="#" class="sub-item">Заказ покупателя</a>
+              <a href="#" class="sub-item">Отгрузки</a>
+              <a href="#" class="sub-item">Возвраты покупателя</a>
+            </div>
+
+            <a class="sub-btn"
+              >Товары<i class="fas fa-angle-right dropdown"></i
+            ></a>
+
+            <div class="sub-menu">
+              <a href="#" class="sub-item">Товары</a>
+              <a href="#" class="sub-item">Оприходования</a>
+              <a href="#" class="sub-item">Списания</a>
+              <a href="#" class="sub-item">Инвентаризация</a>
+              <a href="#" class="sub-item">Остатки</a>
+              <a href="#" class="sub-item">Серийные номера</a>
+              <a href="#" class="sub-item">Перемещения по складу</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <a href="#"><i class="fas fa-th"></i>Инструменты</a>
+        </div>
+
+        <div class="item">
+          <a class="sub-btn"
+            ><i class="fas fa-cogs"></i>Help Desk<i
+              class="fas fa-angle-right dropdown"
+            ></i
+          ></a>
+          <div class="sub-menu">
+            <a href="#" class="sub-item">Заявки</a>
+            <a href="#" class="sub-item">Календарь</a>
+            <a href="#" class="sub-item">Компании</a>
+            <a href="#" class="sub-item">Пользователи</a>
+            <a href="#" class="sub-item">Отчёты</a>
+            <a href="#" class="sub-item">Парк техники</a>
+          </div>
+        </div>
+
+        <div class="item">
+          <a href="#"><i class="fas fa-info-circle"></i>Финансы</a>
+        </div>
+
+        <div class="item">
+          <a href="#"><i class="fas fa-info-circle"></i>Аналитика</a>
+        </div>
+
+        <div class="item">
+          <a href="#"><i class="fas fa-info-circle"></i>База знаний</a>
+        </div>
+
+        <div class="item">
+          <a href="#"><i class="fas fa-info-circle"></i>Документация</a>
+        </div>
+
+        <div class="item">
+          <a href="#"><i class="fas fa-info-circle"></i>Настройки</a>
+        </div>
+
+        <div class="item">
+          <a href="#"><i class="fas fa-info-circle"></i>Список обновлений</a>
+        </div>
+
+        <div class="item">
+          <a href="#"><i class="fas fa-info-circle"></i>Пользователи</a>
+        </div>
+
+        <div class="item">
+          <a href="#"><i class="fas fa-info-circle"></i>Задачи</a>
+        </div>
+
+        <div class="item">
+          <a href="#"><i class="fas fa-info-circle"></i>Сообщить об ошибке</a>
+        </div>
+
+        <div class="item">
+          <a href="#"><i class="fas fa-info-circle"></i>Список обновлений</a>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".sub-btn").click(function () {
+          $(this).next(".sub-menu").slideToggle();
+          $(this).find(".dropdown").toggleClass("rotate");
+        });
+      });
+
+      $(".menu-btn").click(function () {
+        $(".side-bar").addClass("active");
+        $(".menu-btn").css("visibility", "hidden");
+      });
+
+      $(".close-btn").click(function () {
+        $(".side-bar").removeClass("active");
+        $(".menu-btn").css("visibility", "visible");
+      });
+    </script>
+  </body>
+</html>

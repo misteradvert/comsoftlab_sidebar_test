@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: url(./pics/background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+}
+
+.side-bar {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  width: 310px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  overflow-y: auto;
+  transition: 0.6s ease;
+  transition-property: left;
+}
+
+.side-bar.active {
+  left: 0;
+}
+
+.side-bar .menu {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.side-bar .menu .item {
+  position: relative;
+  cursor: pointer;
+}
+
+.side-bar .menu .item a {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+  padding: 5px 25px;
+  line-height: 38px;
+}
+
+.side-bar .menu .item a:hover {
+  background: #d0dbe9;
+  transition: 0.3s ease;
+  color: #2c64a7;
+}
+
+.side-bar .menu .item i {
+  margin-right: 15px;
+}
+
+.side-bar .menu .item a .dropdown {
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+  margin-right: 15px;
+  transition: 0.3s ease;
+}
+
+.side-bar .menu .item .sub-menu {
+  background: rgba(255, 255, 255, 0.1);
+  display: none;
+  line-height: 30px;
+}
+
+.side-bar .menu .item .sub-menu a {
+  padding-left: 60px;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+.close-btn {
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
+  right: 0;
+  margin: 25px;
+  cursor: pointer;
+}
+
+.menu-btn {
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
+  margin: 25px;
+  cursor: pointer;
+}
+
+.menu-oneButton {
+  display: flex;
+}
+
+.user-block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  margin-top: 50px;
+  width: 270px;
+  height: 190px;
+}
+
+.user-block__avatar {
+  background: url("./pics/avatar.png");
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 30%;
+}
+
+.user-block__icons {
+  display: flex;
+  position: relative;
+  gap: 25px;
+}
+
+.user-block__iconsbutton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.user-block__icons-bell {
+  background: url("https://img.icons8.com/pastel-glyph/64/228BE6/appointment-reminders.png");
+  background-size: cover;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.user-block__icons-tick {
+  background: url("https://img.icons8.com/ios/50/228BE6/checked-checkbox--v1.png");
+  background-size: cover;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.user-block__icons-bell-num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  color: blue;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.user-block__icons-tick-num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  color: blue;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.user-block__logout {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d0dbe9;
+  color: #2c64a7;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: auto;
+  height: 35px;
+  border-radius: 20px;
+}
+
+.icons-block {
+  position: relative;
+  width: 290px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.icons-block__icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.icons-block__icons-appstore {
+  background: url("https://img.icons8.com/color/48/000000/app-symbol.png");
+  background-size: cover;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.icons-block__icons-googleplay {
+  background: url("https://img.icons8.com/color/50/000000/google-play.png");
+  background-size: cover;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.icons-block__icons-telegram {
+  background: url("https://img.icons8.com/color/50/000000/telegram-app.png");
+  background-size: cover;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.icons-block__text {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 13px;
+  margin: 10px;
+}
+
+@media screen and (max-width: 320px) {
+  .side-bar .menu .item a {
+    font-size: 18px;
+    padding: 10px 30px;
+    line-height: 40px;
+  }
+
+  .icons-block__icons {
+    gap: 25px;
+  }
+
+  .user-block__icons-bell,
+  .user-block__icons-tick {
+    width: 45px;
+    height: 45px;
+  }
+
+  .user-block {
+    margin-top: 50px;
+    height: 150px;
+  }
+
+  .icons-block {
+    margin-top: 25px;
+    margin-bottom: 45px;
+    transform: scale(1.5);
+  }
+
+  .icons-block__text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 10px;
+    padding-bottom: 50px;
+  }
+
+  .side-bar .menu {
+    width: 100%;
+    margin-top: 70px;
+  }
+}
